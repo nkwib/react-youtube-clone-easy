@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Simple Project in React
+
+This is a basic project from took from "[Build a YouTube Clone Application Using React](https://www.youtube.com/watch?v=VPVzx1ZOVuw)".
+
+![Preview](./pre.png)
+
+-----------------------------------------------------------------------------------------------------
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 ## Available Scripts
 

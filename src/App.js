@@ -17,14 +17,18 @@ class App extends React.Component {
                 q: searchTerm,
                 part: 'snippet',
                 maxResults: 5,
-                key: '[APIKEY]'
+                key: 'API key'
             }
         })
         this.setState({ videos: res.data.items, selectedVideo: res.data.items[0] });
     }
 
+    onVideoSelect = (video) => {
+        this.setState({selectedVideo: video})
+    }
+
     render() {
-        const {selectedVideo} = this.state
+        const {selectedVideo, videos} = this.state
         return(
             <Grid justify='center' container spacing={10}>
                 <Grid item xs={12}>
@@ -36,7 +40,7 @@ class App extends React.Component {
                             <VideoDetail video={selectedVideo}></VideoDetail>
                         </Grid>
                         <Grid item xs={4}>
-                            <VideoList></VideoList>
+                            <VideoList videos={videos} onVideoSelect={this.onVideoSelect}></VideoList>
                         </Grid>
                     </Grid>
                 </Grid>
